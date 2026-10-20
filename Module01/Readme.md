@@ -46,8 +46,16 @@ while (number > 0) {
 Initialize a variable at declaration only when needed. If you assign a value before using it, 
 a separate initial value is unnecessary.
 --------------------------------------------------------------------------------------
+A palindrome question can also be solved by reversing half of the number and compating both half. 
+Slightly more efficient.
+--------------------------------------------------------------------------------------
 Use a += 10 only when we have only 1 value to express-operate to a.
 If we have an expression inplace of 10, avoid this operator as,
 rev *= 10 + (num%10) is equivalent to
 rev = rev * (10 + (num%10)) --> rev = rev * 10 + rev * (num%10), not rev = rev * 10 + (num%10)
 --------------------------------------------------------------------------------------
+For solving Factorial problem, Loop is a better approach than recursion because Each recursive call 
+uses stack memory. For a sufficiently large input, you can get a StackOverflowError. 
+Also, long cannot store arbitrarily large factorials.
+The key lesson is that an optimization doesn't always improve Big-O complexity. 
+Here, the main benefit of iteration is reducing auxiliary space from (O(n) to O(1)
