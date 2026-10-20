@@ -21,3 +21,28 @@ Explains the use of the ternary operator "?:" in Java.
 The ternary operator evaluates a condition and returns one of two values.
 It cannot select between void method calls, such as System.out.println(),
 because void methods do not return values. Use the ternary operator to select a value.
+------------------------------------------------------------------------------------
+When we do (digit)/10 on integers, the quotient comes as 0 as this operation on integers
+skips the fractional part.
+--------------------------------------------------------------------------------------
+Variable Initialization in Java
+
+- A local variable must be assigned a value before it is used.
+- It is not necessary to assign a value when declaring the variable.
+
+int digit;       // Declaration
+digit = 5;       // Assignment
+System.out.println(digit);  // Valid
+
+Example in a loop:
+
+int digit;
+
+while (number > 0) {
+    digit = number % 10;  // Assigned before use
+    sum += digit;
+    number /= 10;
+}
+Initialize a variable at declaration only when needed. If you assign a value before using it, 
+a separate initial value is unnecessary.
+--------------------------------------------------------------------------------------
