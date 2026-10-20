@@ -46,3 +46,7 @@ while (number > 0) {
 Initialize a variable at declaration only when needed. If you assign a value before using it, 
 a separate initial value is unnecessary.
 --------------------------------------------------------------------------------------
+Use a += 10 only when we have only 1 value to express-operate to a.
+If we have an expression inplace of 10, avoid this operator as,
+rev *= 10 + (num%10) is equivalent to
+rev = rev * (10 + (num%10)) --> rev = rev * 10 + rev * (num%10), not rev = rev * 10 + (num%10)
