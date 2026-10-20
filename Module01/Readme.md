@@ -16,7 +16,7 @@ There are two ways to call a method from the static main() method:
 Since main() is static, it cannot directly call an instance method
 without an object. Static methods belong to the class, while instance
 methods are invoked on objects.
-
+------------------------------------------------------------------------------------
 Explains the use of the ternary operator "?:" in Java.
 The ternary operator evaluates a condition and returns one of two values.
 It cannot select between void method calls, such as System.out.println(),

@@ -1,4 +1,4 @@
-package practice;
+package evenodd;
 
 import java.util.Scanner;
 
