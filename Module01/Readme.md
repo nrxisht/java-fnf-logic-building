@@ -16,15 +16,15 @@ There are two ways to call a method from the static main() method:
 Since main() is static, it cannot directly call an instance method
 without an object. Static methods belong to the class, while instance
 methods are invoked on objects.
-------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------
 Explains the use of the ternary operator "?:" in Java.
 The ternary operator evaluates a condition and returns one of two values.
 It cannot select between void method calls, such as System.out.println(),
 because void methods do not return values. Use the ternary operator to select a value.
-------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------
 When we do (digit)/10 on integers, the quotient comes as 0 as this operation on integers
 skips the fractional part.
---------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------
 Variable Initialization in Java
 
 - A local variable must be assigned a value before it is used.
@@ -45,17 +45,28 @@ while (number > 0) {
 }
 Initialize a variable at declaration only when needed. If you assign a value before using it, 
 a separate initial value is unnecessary.
---------------------------------------------------------------------------------------
-A palindrome question can also be solved by reversing half of the number and compating both half. 
+-----------------------------------------------------------------------------------------------------------------------
+A palindrome question can also be solved by reversing half of the number and comparing both half. 
 Slightly more efficient.
---------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------
 Use a += 10 only when we have only 1 value to express-operate to a.
 If we have an expression inplace of 10, avoid this operator as,
 rev *= 10 + (num%10) is equivalent to
 rev = rev * (10 + (num%10)) --> rev = rev * 10 + rev * (num%10), not rev = rev * 10 + (num%10)
---------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------
 For solving Factorial problem, Loop is a better approach than recursion because Each recursive call 
 uses stack memory. For a sufficiently large input, you can get a StackOverflowError. 
 Also, long cannot store arbitrarily large factorials.
 The key lesson is that an optimization doesn't always improve Big-O complexity. 
 Here, the main benefit of iteration is reducing auxiliary space from (O(n) to O(1)
+-----------------------------------------------------------------------------------------------------------------------
+For Divisors, Primes, Sieve Problems:
+
+when we track from 1 to the number n i.e. 36. factors/divisors are always in pairs and unique till sqrt(n).
+But when we cross that pivot point, they start repeating in reverse pairs.
+To check divisors, loop it from i=1 to i*i <= num;
+i*i <= num is equivalent to i <= sqrt(i)
+-----------------------------------------------------------------------------------------------------------------------
+A file can only have one public class. Other classes can exist without public, but not a good practice
+to keep more than 1 classes in a file.
+A package can have more than one public classes with their own main() functions.
